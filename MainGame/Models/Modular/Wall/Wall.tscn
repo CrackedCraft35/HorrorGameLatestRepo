@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://4771mibrwlr7"]
+
+[node name="Wall" type="CSGBox3D" unique_id=232371288]
+use_collision = true
+size = Vector3(0.3, 4, 4)

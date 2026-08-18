@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bc6cxhwn28rs6"]
+
+[ext_resource type="Script" uid="uid://ymsb3qiip4up" path="res://MainGame/Scripts/Player/PlayerScriptMovement.gd" id="1_c8x31"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xlig5"]
+radius = 0.4
+height = 1.8
+
+[node name="PlayerBp" type="CharacterBody3D" unique_id=1032322335]
+script = ExtResource("1_c8x31")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=499807515]
+shape = SubResource("CapsuleShape3D_xlig5")
+
+[node name="Head" type="Node3D" parent="." unique_id=50279020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1710166130]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=223955601]
+
+[node name="PSXShader" type="ColorRect" parent="HUD" unique_id=1994867854]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
