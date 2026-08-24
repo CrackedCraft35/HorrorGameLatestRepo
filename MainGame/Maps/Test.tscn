@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://e48hgn0y02fl"]
+
+[ext_resource type="PackedScene" uid="uid://pjvbsjboh5ko" path="res://MainGame/Models/Modular/Floor/Floor.tscn" id="1_2g5h8"]
+[ext_resource type="PackedScene" uid="uid://bc6cxhwn28rs6" path="res://MainGame/Blueprints/Player/Player_BP.tscn" id="2_vqxte"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vqxte"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_fg5qq"]
+sky_material = SubResource("ProceduralSkyMaterial_vqxte")
+
+[sub_resource type="Environment" id="Environment_wuq64"]
+background_mode = 2
+sky = SubResource("Sky_fg5qq")
+glow_enabled = true
+
+[node name="Test" type="Node3D" unique_id=911691026]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=535255796]
+environment = SubResource("Environment_wuq64")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=887817038]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" parent="." unique_id=399569044 instance=ExtResource("1_2g5h8")]
+
+[node name="Floor2" parent="." unique_id=1313497530 instance=ExtResource("1_2g5h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="PlayerBp" parent="." unique_id=1032322335 instance=ExtResource("2_vqxte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, 4.5)

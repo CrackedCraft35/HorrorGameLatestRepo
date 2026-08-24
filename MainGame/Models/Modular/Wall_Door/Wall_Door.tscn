@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cqg1iawya1npe"]
+
+[node name="Wall_Door" type="CSGBox3D" unique_id=232371288]
+use_collision = true
+size = Vector3(0.1, 3, 3)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2106653437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+operation = 2
+size = Vector3(1, 2, 1)
