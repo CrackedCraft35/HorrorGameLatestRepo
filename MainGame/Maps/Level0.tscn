@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dng4edhix32l2"]
+
+[ext_resource type="PackedScene" uid="uid://dspaqg61wbptb" path="res://MainGame/Maps/Prefab/Level0/Level0Prefab.tscn" id="1_f87bf"]
+[ext_resource type="PackedScene" uid="uid://bc6cxhwn28rs6" path="res://MainGame/Blueprints/Player/Player_BP.tscn" id="2_renja"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f87bf"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_renja"]
+sky_material = SubResource("ProceduralSkyMaterial_f87bf")
+
+[sub_resource type="Environment" id="Environment_3umks"]
+background_mode = 2
+sky = SubResource("Sky_renja")
+glow_enabled = true
+
+[node name="Level0" type="Node3D" unique_id=1920864142]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=614260680]
+environment = SubResource("Environment_3umks")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1725922882]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Level0Prefab" parent="." unique_id=776675755 instance=ExtResource("1_f87bf")]
+
+[node name="PlayerBp" parent="." unique_id=1032322335 instance=ExtResource("2_renja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

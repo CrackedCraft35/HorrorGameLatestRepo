@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HorrorStory"
-run/main_scene="uid://e48hgn0y02fl"
+run/main_scene="uid://dng4edhix32l2"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
