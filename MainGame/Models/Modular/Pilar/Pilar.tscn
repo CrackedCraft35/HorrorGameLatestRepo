@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dsql42sy1u6bw"]
+
+[node name="Pilar" type="CSGBox3D" unique_id=468321443]
+size = Vector3(1, 4, 1)
