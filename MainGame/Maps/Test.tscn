@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://pjvbsjboh5ko" path="res://MainGame/Models/Modular/Floor/Floor.tscn" id="1_2g5h8"]
 [ext_resource type="PackedScene" uid="uid://bc6cxhwn28rs6" path="res://MainGame/Blueprints/Player/Player_BP.tscn" id="2_vqxte"]
+[ext_resource type="PackedScene" uid="uid://4771mibrwlr7" path="res://MainGame/Models/Modular/Wall/Wall.tscn" id="3_wuq64"]
+[ext_resource type="PackedScene" uid="uid://cqg1iawya1npe" path="res://MainGame/Models/Modular/Wall_Door/Wall_Door.tscn" id="4_2w8ba"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vqxte"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,5 +31,14 @@ shadow_enabled = true
 [node name="Floor2" parent="." unique_id=1313497530 instance=ExtResource("1_2g5h8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
+[node name="Floor3" parent="." unique_id=1077998722 instance=ExtResource("1_2g5h8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
 [node name="PlayerBp" parent="." unique_id=1032322335 instance=ExtResource("2_vqxte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.5, 4.5)
+
+[node name="Wall" parent="." unique_id=232371288 instance=ExtResource("3_wuq64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+
+[node name="Wall_Door" parent="." unique_id=1157641767 instance=ExtResource("4_2w8ba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.1, 4)
